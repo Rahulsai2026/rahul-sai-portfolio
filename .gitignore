@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+.DS_Store
+
+# Legacy local Memory Run prototype; not part of this Next.js portfolio.
+app.js
+server.js
+index.html
+style.css
+game-log.json
+lab-state.json
+server.log
+com.memory-run.server.plist
