@@ -36,10 +36,10 @@ export const projects: Project[] = [
     result: "Built an attribution framework separating AI-generated actions from human intervention during live trading; it refused to credit human-managed exits to the agent.",
     impact: "Shows how to evaluate an agent as a controlled workflow—with audit logs, execution constraints, and guardrails—rather than as magic.",
     artifacts: [
-      { label: "Architecture Diagram" },
-      { label: "Attribution Ledger" },
-      { label: "Risk-Control Checklist" },
-      { label: "GitHub Repo" },
+      { label: "Architecture Diagram", href: "https://github.com/Rahulsai2026/keel#architecture" },
+      { label: "Attribution Ledger", href: "https://github.com/Rahulsai2026/keel/blob/main/docs/attribution-ledger.md" },
+      { label: "Risk-Control Checklist", href: "https://github.com/Rahulsai2026/keel/blob/main/docs/control-checks.md" },
+      { label: "GitHub Repo", href: "https://github.com/Rahulsai2026/keel" },
     ],
   },
   {
