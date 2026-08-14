@@ -11,22 +11,24 @@ export function ProjectCard({ project }: { project: Project }) {
       <div className="methods"><p className="label">Methods</p><ul>{project.methods.map((method) => <li key={method}>{method}</li>)}</ul></div>
       <div className="finding"><p className="label">Result / current finding</p><p>{project.result}</p></div>
       <p className="project-impact"><span>Why it matters</span>{project.impact}</p>
-      <div className="artifacts" aria-label={`${project.title} artifacts`}>
-        {project.artifacts.map((artifact) => (
-          artifact.href ? (
-            <a
-              href={artifact.href}
-              key={artifact.label}
-              target={artifact.href.startsWith("http") ? "_blank" : undefined}
-              rel={artifact.href.startsWith("http") ? "noreferrer" : undefined}
-            >
-              {artifact.label}<span aria-hidden="true">↗</span>
-            </a>
-          ) : (
-            <span className="artifact-pending" key={artifact.label}>{artifact.label}<small>Available soon</small></span>
-          )
-        ))}
-      </div>
+      {project.artifacts.length > 0 && (
+        <div className="artifacts" aria-label={`${project.title} artifacts`}>
+          {project.artifacts.map((artifact) => (
+            artifact.href ? (
+              <a
+                href={artifact.href}
+                key={artifact.label}
+                target={artifact.href.startsWith("http") ? "_blank" : undefined}
+                rel={artifact.href.startsWith("http") ? "noreferrer" : undefined}
+              >
+                {artifact.label}<span aria-hidden="true">↗</span>
+              </a>
+            ) : (
+              <span className="artifact-pending" key={artifact.label}>{artifact.label}<small>Available soon</small></span>
+            )
+          ))}
+        </div>
+      )}
     </article>
   );
 }
