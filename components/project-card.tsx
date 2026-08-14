@@ -9,8 +9,7 @@ export function ProjectCard({ project }: { project: Project }) {
         <div><p className="label">What I built</p><p>{project.built}</p></div>
       </div>
       <div className="methods"><p className="label">Methods</p><ul>{project.methods.map((method) => <li key={method}>{method}</li>)}</ul></div>
-      <div className="finding"><p className="label">Result / current finding</p><p>{project.result}</p></div>
-      <p className="project-impact"><span>Why it matters</span>{project.impact}</p>
+      <div className="finding"><p className="label">What it achieved</p><p>{project.result}</p></div>
       {project.artifacts.length > 0 && (
         <div className="artifacts" aria-label={`${project.title} artifacts`}>
           {project.artifacts.map((artifact) => (
